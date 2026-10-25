@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LazyBuddy AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">LazyBuddy<span>.ai</span> 🦥</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#tools">AI Tools</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <span class="tag">SLOW AND STEADY CHALLENGE</span>
+      <h1>Work less.<br>Live <span>more.</span></h1>
+      <p>Your personal productivity buddy. Summarize text, create
+      checklists, and organize notes with less effort.</p>
+      <a href="#tools" class="btn">Explore Tools →</a>
+    </div>
+    <div class="sloth">🦥</div>
+  </section>
+
+  <main id="tools">
+    <h2>Your Productivity Toolkit ✨</h2>
+    <p class="subtitle">Choose a task and let LazyBuddy help.</p>
+
+    <div class="tools">
+
+      <section class="card">
+        <div class="icon">📝</div>
+        <h3>Quick Summarizer</h3>
+        <p>Make long text shorter.</p>
+        <textarea id="summaryInput"
+          placeholder="Paste your text here..."></textarea>
+        <button onclick="summarize()">Summarize Text</button>
+        <div class="result" id="summaryResult"></div>
+      </section>
+
+      <section class="card">
+        <div class="icon">✅</div>
+        <h3>To-Do Generator</h3>
+        <p>Turn your ideas into a checklist.</p>
+        <textarea id="todoInput"
+          placeholder="Study HTML, finish homework, clean room..."></textarea>
+        <button onclick="generateTodos()">Create Checklist</button>
+        <div class="result" id="todoResult"></div>
+      </section>
+
+      <section class="card">
+        <div class="icon">📂</div>
+        <h3>Text Organizer</h3>
+        <p>Clean up your messy notes.</p>
+        <textarea id="organizeInput"
+          placeholder="Paste your notes here..."></textarea>
+        <button onclick="organizeText()">Organize Notes</button>
+        <div class="result" id="organizeResult"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <section class="about" id="about">
+    <h2>Built for a slower, smarter life 🌱</h2>
+    <p>This browser demo processes text locally using JavaScript.
+    Real AI features can be connected to an open-weight model
+    running on your computer.</p>
+  </section>
+
+  <footer>
+    Made with 💚 for the Slow and Steady Challenge
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #245c43;
+  --light-green: #e4f0df;
+  --background: #f5f7ed;
+  --text: #23382b;
+  --muted: #718074;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: white;
+  border-bottom: 1px solid #e0e7dc;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.logo span {
+  color: #86a56d;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #72965b;
+}
+
+.hero {
+  padding: 75px 7%;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 25px;
+  background: var(--light-green);
+  color: var(--green);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 65px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: #72965b;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 13px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover,
+button:hover {
+  background: #17432f;
+  transform: translateY(-2px);
+}
+
+.sloth {
+  background: #e3edda;
+  border-radius: 30px;
+  min-height: 270px;
+  display: grid;
+  place-items: center;
+  font-size: 120px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+main {
+  padding: 30px 7% 60px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.card {
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid #e0e7dc;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px #23452a08;
+}
+
+.icon {
+  background: var(--light-green);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 125px;
+  padding: 12px;
+  border: 1px solid #dce4d8;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #72965b;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 9px;
+  background: var(--green);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.result {
+  display: none;
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f0f6eb;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.result.show {
+  display: block;
+}
+
+.result ul {
+  padding-left: 20px;
+}
+
+.result li {
+  margin-bottom: 8px;
+}
+
+.result label {
+  cursor: pointer;
+}
+
+.result input[type="checkbox"] {
+  margin-right: 7px;
+}
+
+.copy-btn {
+  margin-top: 12px;
+  background: #dcebd4;
+  color: var(--green);
+}
+
+.about {
+  margin: 0 7% 50px;
+  padding: 30px;
+  background: var(--light-green);
+  border-radius: 20px;
+}
+
+.about p {
+  color: #526953;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #e0e7dc;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .tools {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .sloth {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 16px 5%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  .hero {
+    padding: 45px 5%;
+  }
+
+  main {
+    padding: 25px 5%;
+  }
+
+  .tools {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    margin: 0 5% 35px;
+    padding: 22px;
+  }
+}
